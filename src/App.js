@@ -11,6 +11,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View>
+        <Text style={styles.storeTitle}>Patika Store</Text>
         <SearchBar />
         <FlatList
           data={DATA}
@@ -25,6 +26,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#EEEEEE',
+  },
+  storeTitle: {
+    color: '#222831',
+    textAlign: 'center',
+    fontSize: 24,
+    marginTop: 10,
   },
 });
 
