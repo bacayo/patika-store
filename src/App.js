@@ -2,6 +2,7 @@ import React from 'react';
 import {View, SafeAreaView, Text, FlatList, StyleSheet} from 'react-native';
 import productData from './product_data.json';
 import SearchBar from './components/SearchBar';
+import ItemCard from './components/ItemCard';
 
 const DATA = productData;
 
@@ -18,6 +19,7 @@ const App = () => {
           renderItem={({item}) => <Text>{item.title}</Text>}
         />
       </View>
+      <ItemCard />
     </SafeAreaView>
   );
 };
