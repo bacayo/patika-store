@@ -1,11 +1,18 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import styles from './itemCardStyle';
 
-const ItemCard = () => {
+const ItemCard = ({products}) => {
   return (
-    <View>
-      <Image style={styles.image} />
+    <View style={styles.container}>
+      <Image style={styles.image} source={{uri: products.imgURL}} />
+      <View style={styles.innerContainer}>
+        <Text style={styles.title}>{products.title}</Text>
+        <Text style={styles.price}>{products.price}</Text>
+        <Text style={styles.inStock}>
+          {products.inStock === 'true' ? '' : 'Out of Stock'}
+        </Text>
+      </View>
     </View>
   );
 };
